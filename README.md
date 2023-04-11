@@ -12,6 +12,28 @@ Le module EJB contient les classes qui implémentent les composants d'entreprise
 
 - meta-inf: Contient un fichier très important qui est le persistence.xml où nous avons defini notre datasource déja configuré grace à wildfly 27 et notre persistence unit.
 
+Code:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd ">
+  
+  <persistence-unit name="GestionInscription_UP" transaction-type="JTA">
+  	
+    <jta-data-source>java:/MySqlDS</jta-data-source>
+  	
+    <properties>
+  		
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+  	
+    </properties>
+  
+  </persistence-unit>
+
+</persistence>
+```
+
 - ejbmodules: Contient les packages sn.isi.dao et sn.isi.entities.
 Dans DAO on a les interfaces et les classes d'implémentations et dans ENTITIES on a les entités.
 
