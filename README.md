@@ -59,21 +59,11 @@ Le module Web contient les pages Web et les contrôleurs pour l'application. Il 
 
 ### Module EAR
 
-Le module EAR est le module principal qui relie les modules EJB et Web ensemble. Il comprend les sous-dossiers suivants :
-
-- src/main/application: Contient le fichier application.xml qui définit les modules de l'application et leurs relations.
-- src/main/resources: Contient les fichiers de configuration de l'application tels que jboss-web.xml et web.xml.
+Le module EAR est le module principal qui relie les modules EJB et Web ensemble
 
 ## Construction du projet
 
-Le projet utilise Maven comme système de gestion de build. Pour construire l'application, exécutez la commande suivante à la racine du projet :
-
-mvn clean package
-
-rust
-Copy code
-
-Cela va construire les modules EJB et Web, puis créer le fichier EAR qui peut être déployé sur un serveur d'applications.
+Il faut ajouter le projet web et ejb dans le EAR. Ce dernier pourra être déployé sur un serveur d'applications.
 
 ## Exécution de l'application
 
